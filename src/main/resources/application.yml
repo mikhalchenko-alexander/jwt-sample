@@ -1,0 +1,5 @@
+jwt:
+  route.authentication.path: /auth
+  header_name: Authorization
+  header_prefix: Bearer
+  secret: changeme
