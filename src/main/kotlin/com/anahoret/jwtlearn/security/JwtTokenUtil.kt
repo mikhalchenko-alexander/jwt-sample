@@ -21,11 +21,7 @@ class JwtTokenUtil(
             .sign(algorithm)
     }
 
-    fun validateToken(token: String, userDetails: UserDetails): Boolean {
-        return verifyAndDecode(token) != null
-    }
-
-    fun getUsernameFromToken(token: String): String? {
+    fun validateAndGetUsernameFromToken(token: String): String? {
         return verifyAndDecode(token)?.subject
     }
 
